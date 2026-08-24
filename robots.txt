@@ -1,0 +1,6 @@
+# Allow all search engine robots to crawl our website
+User-agent: *
+Allow: /
+
+# Show robots where our sitemap map is located
+Sitemap: https://neharavali.github.io/seo-portfolio/sitemap.xml
