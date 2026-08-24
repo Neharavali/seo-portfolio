@@ -1,438 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neha Ravali — Senior SEO Specialist</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --ink:#0E1826;
-    --surface:#152238;
-    --surface-2:#1B2C46;
-    --line:#2A3C58;
-    --text:#EAEEF5;
-    --text-muted:#8FA0BA;
-    --gold:#E7A93D;
-    --gold-dim:#8A6A2E;
-    --teal:#49C8B9;
-    --link-blue:#8AB4F8;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags [15] -->
+  <title>Neha Ravali | Technical SEO Specialist & Growth Marketer</title>
+  <meta name="description" content="Technical SEO Specialist specializing in site audits, Core Web Vitals, Schema markup, and organic growth strategies.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://Neharavali.github.io/seo-portfolio/">
 
-    --display: 'Fraunces', serif;
-    --body: 'Inter', sans-serif;
-    --mono: 'JetBrains Mono', monospace;
-  }
+  <!-- Open Graph / Facebook [14, 16] -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://Neharavali.github.io/seo-portfolio/">
+  <meta property="og:title" content="Neha Ravali | Technical SEO Specialist">
+  <meta property="og:description" content="Technical SEO Specialist specializing in site audits, Core Web Vitals, and organic growth.">
 
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  <!-- Twitter [14, 16] -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://Neharavali.github.io/seo-portfolio/">
+  <meta property="twitter:title" content="Neha Ravali | Technical SEO Specialist">
+  <meta property="twitter:description" content="Technical SEO Specialist specializing in site audits, Core Web Vitals, and organic growth.">
 
-  body{
-    background:var(--ink);
-    color:var(--text);
-    font-family:var(--body);
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600&family=Lexend:wght@500;600;700&display=swap" rel="stylesheet">
 
-  @media (prefers-reduced-motion: reduce){
-    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
+  <!-- JSON-LD Structured Data for Person/Professional [15] -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Neha Ravali",
+    "jobTitle": "Technical SEO Specialist",
+    "url": "https://Neharavali.github.io/seo-portfolio/",
+    "sameAs": [
+      "https://linkedin.com/in/yourprofile"
+    ],
+    "knowsAbout": ["Technical SEO", "Core Web Vitals", "Structured Data", "Schema Markup", "Site Audits"]
   }
+  </script>
 
-  a{color:inherit;}
-  :focus-visible{outline:2px solid var(--teal); outline-offset:3px;}
+  <style>
+    /* CSS Variables matching your theme colors */
+    :root {
+      --ink: #0e1826;
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+      --line: #1e293b;
+      --teal: #49c8b9;
+      --gold: #e7a93d;
+      --gold-dim: rgba(231,169,61,0.5);
+      --surface: #132337;
+      --link-blue: #8ab4f8;
+      --body: 'Inter', sans-serif;
+      --mono: 'Fira Code', monospace;
+      --display: 'Lexend', sans-serif;
+    }
 
-  .wrap{max-width:920px; margin:0 auto; padding:0 28px;}
+    /* Your Beautiful CSS Styles [1-6, 10-13] */
+    *{margin:0;padding:0;box-sizing:border-box;} 
+    html{scroll-behavior:smooth;}
+    body{ background:var(--ink); color:var(--text); font-family:var(--body); line-height:1.6; -webkit-font-smoothing:antialiased; }
+    @media (prefers-reduced-motion: reduce){ *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;} }
+    a{color:inherit;} :focus-visible{outline:2px solid var(--teal); outline-offset:3px;}
+    .wrap{max-width:920px; margin:0 auto; padding:0 28px;}
 
-  /* ---------- NAV ---------- */
-  nav{
-    position:sticky; top:0; z-index:50;
-    background:rgba(14,24,38,0.86);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
-  }
-  nav .wrap{
-    display:flex; align-items:center; justify-content:space-between;
-    height:64px;
-  }
-  .nav-mark{
-    font-family:var(--mono); font-size:14px; letter-spacing:0.02em;
-    color:var(--text);
-  }
-  .nav-mark span{color:var(--gold);}
-  .nav-links{display:flex; gap:28px; list-style:none;}
-  .nav-links a{
-    font-family:var(--mono); font-size:12.5px; letter-spacing:0.04em;
-    color:var(--text-muted); text-decoration:none; text-transform:uppercase;
-    transition:color .2s ease;
-  }
-  .nav-links a:hover{color:var(--gold);}
-  @media (max-width:640px){ .nav-links{gap:16px;} .nav-links a{font-size:11px;} }
+    /* NAV [1] */
+    nav{ position:sticky; top:0; z-index:50; background:rgba(14,24,38,0.86); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); } 
+    nav .wrap{ display:flex; align-items:center; justify-content:space-between; height:64px; } 
+    .nav-mark{ font-family:var(--mono); font-size:14px; letter-spacing:0.02em; color:var(--text); } 
+    .nav-mark span{color:var(--gold);} 
+    .nav-links{display:flex; gap:28px; list-style:none;} 
+    .nav-links a{ font-family:var(--mono); font-size:12.5px; letter-spacing:0.04em; color:var(--text-muted); text-decoration:none; text-transform:uppercase; transition:color .2s ease; } 
+    .nav-links a:hover{color:var(--gold);} 
+    @media (max-width:640px){ .nav-links{gap:16px;} .nav-links a{font-size:11px;} }
 
-  /* ---------- HERO / SERP ---------- */
-  .hero{padding:64px 0 56px;}
-  .search-bar{
-    display:flex; align-items:center; gap:12px;
-    background:var(--surface);
-    border:1px solid var(--line);
-    border-radius:28px;
-    padding:14px 22px;
-    max-width:560px;
-    box-shadow:0 1px 0 rgba(255,255,255,0.02) inset;
-  }
-  .search-bar svg{flex-shrink:0; opacity:0.5;}
-  .search-type{
-    font-family:var(--mono); font-size:14.5px; color:var(--text);
-    white-space:nowrap; overflow:hidden; border-right:2px solid var(--gold);
-    animation:type 2.6s steps(34,end) 1 both, blink 0.8s step-end infinite;
-  }
-  @keyframes type{ from{width:0;} to{width:34ch;} }
-  @keyframes blink{ 50%{border-color:transparent;} }
+    /* HERO / SERP [2, 10, 11] */
+    .hero{padding:64px 0 56px;} 
+    .search-bar{ display:flex; align-items:center; gap:12px; background:var(--surface); border:1px solid var(--line); border-radius:28px; padding:14px 22px; max-width:560px; box-shadow:0 1px 0 rgba(255,255,255,0.02) inset; } 
+    .search-bar svg{flex-shrink:0; opacity:0.5;} 
+    .search-type{ font-family:var(--mono); font-size:14.5px; color:var(--text); white-space:nowrap; overflow:hidden; border-right:2px solid var(--gold); animation:type 2.6s steps(34,end) 1 both, blink 0.8s step-end infinite; } 
+    @keyframes type{ from{width:0;} to{width:34ch;} } 
+    @keyframes blink{ 50%{border-color:transparent;} }
+    .serp-meta{ font-family:var(--mono); font-size:12px; color:var(--text-muted); margin:22px 0 6px; letter-spacing:0.02em; opacity:0; animation:fadeIn .6s ease 2.5s forwards; } 
+    .serp-result{ opacity:0; animation:fadeIn .6s ease 2.8s forwards; } 
+    @keyframes fadeIn{ to{opacity:1;} }
+    .badge-row{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px;} 
+    .badge{ font-family:var(--mono); font-size:10.5px; letter-spacing:0.03em; text-transform:uppercase; color:var(--teal); border:1px solid rgba(73,200,185,0.35); background:rgba(73,200,185,0.08); padding:3px 9px; border-radius:4px; } 
+    .badge.gold{ color:var(--gold); border-color:rgba(231,169,61,0.35); background:rgba(231,169,61,0.08); }
+    .result-url{font-family:var(--body); font-size:14px; color:var(--teal); margin-bottom:4px;} 
+    .result-url span{color:var(--text-muted);}
+    h1.result-title{ font-family:var(--display); font-weight:600; font-size:clamp(32px,5vw,48px); color:var(--link-blue); line-height:1.15; margin-bottom:10px; }
+    .result-desc{ font-family:var(--body); font-size:16px; color:var(--text-muted); max-width:620px; margin-bottom:22px; } 
+    .result-desc strong{color:var(--text); font-weight:600;}
+    .hero-contact{ display:flex; flex-wrap:wrap; gap:18px; align-items:center; font-family:var(--mono); font-size:13px; color:var(--text-muted); } 
+    .hero-contact a{text-decoration:none; color:var(--text); border-bottom:1px solid var(--gold-dim); padding-bottom:1px;} 
+    .hero-contact a:hover{color:var(--gold); border-color:var(--gold);}
+    .hero-actions{ display:flex; flex-wrap:wrap; gap:12px; margin-top:22px; } 
+    .hero-actions .cta-btn{ display:inline-flex; align-items:center; justify-content:center; }
 
-  .serp-meta{
-    font-family:var(--mono); font-size:12px; color:var(--text-muted);
-    margin:22px 0 6px; letter-spacing:0.02em;
-    opacity:0; animation:fadeIn .6s ease 2.5s forwards;
-  }
-  .serp-result{
-    opacity:0; animation:fadeIn .6s ease 2.8s forwards;
-  }
-  @keyframes fadeIn{ to{opacity:1;} }
+    /* SECTION LABELS [12] */
+    section{padding:52px 0; border-top:1px solid var(--line);} 
+    .eyebrow{ font-family:var(--mono); font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; display:flex; align-items:center; gap:10px; } 
+    .eyebrow::after{content:''; flex:1; height:1px; background:var(--line);} 
+    h2{ font-family:var(--display); font-weight:600; font-size:clamp(24px,3.5vw,32px); margin-bottom:22px; color:var(--text); }
 
-  .badge-row{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px;}
-  .badge{
-    font-family:var(--mono); font-size:10.5px; letter-spacing:0.03em;
-    text-transform:uppercase; color:var(--teal);
-    border:1px solid rgba(73,200,185,0.35);
-    background:rgba(73,200,185,0.08);
-    padding:3px 9px; border-radius:4px;
-  }
-  .badge.gold{ color:var(--gold); border-color:rgba(231,169,61,0.35); background:rgba(231,169,61,0.08); }
+    /* SUMMARY [12] */
+    .summary p{font-size:16.5px; color:var(--text-muted); max-width:680px;} 
+    .summary p strong{color:var(--text); font-weight:600;}
 
-  .result-url{font-family:var(--body); font-size:14px; color:var(--teal); margin-bottom:4px;}
-  .result-url span{color:var(--text-muted);}
+    /* COMPETENCIES [3] */
+    .kw-table{border:1px solid var(--line); border-radius:10px; overflow:hidden;} 
+    .kw-row{ display:grid; grid-template-columns:1fr auto; gap:16px; padding:13px 18px; align-items:center; border-bottom:1px solid var(--line); transition:background .2s ease; } 
+    .kw-row:last-child{border-bottom:none;} 
+    .kw-row:hover{background:var(--surface);} 
+    .kw-name{font-size:14.5px; color:var(--text);} 
+    .kw-tier{ font-family:var(--mono); font-size:11px; color:var(--teal); display:flex; align-items:center; gap:5px; } 
+    .kw-tier.core{color:var(--gold);} 
+    .kw-tier::before{content:'▲'; font-size:8px;}
 
-  h1.result-title{
-    font-family:var(--display); font-weight:600; font-size:clamp(32px,5vw,48px);
-    color:var(--link-blue); line-height:1.15; margin-bottom:10px;
-  }
+    /* EXPERIENCE TIMELINE [4] */
+    .timeline{position:relative; padding-left:26px;} 
+    .timeline::before{ content:''; position:absolute; left:5px; top:6px; bottom:6px; width:1px; background:var(--line); } 
+    .role{position:relative; margin-bottom:44px;} 
+    .role:last-child{margin-bottom:0;} 
+    .role::before{ content:''; position:absolute; left:-26px; top:6px; width:11px; height:11px; border-radius:50%; background:var(--ink); border:2px solid var(--gold); } 
+    .role-head{ display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:8px 20px; margin-bottom:4px; } 
+    .role-title{font-family:var(--display); font-size:19px; font-weight:600; color:var(--text);} 
+    .role-date{font-family:var(--mono); font-size:12px; color:var(--gold); white-space:nowrap;} 
+    .role-org{font-size:14px; color:var(--teal); margin-bottom:12px;} 
+    .role ul{list-style:none; display:flex; flex-direction:column; gap:8px;} 
+    .role li{ font-size:14.5px; color:var(--text-muted); padding-left:18px; position:relative; } 
+    .role li::before{ content:'→'; position:absolute; left:0; color:var(--gold-dim); font-size:12px; top:2px; } 
+    .role li strong{color:var(--text); font-weight:600;}
 
-  .result-desc{
-    font-family:var(--body); font-size:16px; color:var(--text-muted);
-    max-width:620px; margin-bottom:22px;
-  }
-  .result-desc strong{color:var(--text); font-weight:600;}
+    /* EDUCATION [13] */
+    .edu-row{ display:grid; grid-template-columns:1fr 1fr auto; gap:14px; padding:14px 0; border-bottom:1px solid var(--line); font-size:14.5px; } 
+    .edu-row:last-child{border-bottom:none;} 
+    .edu-deg{color:var(--text); font-weight:500;} 
+    .edu-school{color:var(--text-muted);} 
+    .edu-year{font-family:var(--mono); color:var(--gold); font-size:13px;} 
+    @media (max-width:640px){ .edu-row{grid-template-columns:1fr; gap:2px;} }
 
-  .hero-contact{
-    display:flex; flex-wrap:wrap; gap:18px; align-items:center;
-    font-family:var(--mono); font-size:13px; color:var(--text-muted);
-  }
-  .hero-contact a{text-decoration:none; color:var(--text); border-bottom:1px solid var(--gold-dim); padding-bottom:1px;}
-  .hero-contact a:hover{color:var(--gold); border-color:var(--gold);}
-
-  /* ---------- SECTION LABELS ---------- */
-  section{padding:52px 0; border-top:1px solid var(--line);}
-  .eyebrow{
-    font-family:var(--mono); font-size:12px; letter-spacing:0.08em; text-transform:uppercase;
-    color:var(--gold); margin-bottom:14px; display:flex; align-items:center; gap:10px;
-  }
-  .eyebrow::after{content:''; flex:1; height:1px; background:var(--line);}
-  h2{
-    font-family:var(--display); font-weight:600; font-size:clamp(24px,3.5vw,32px);
-    margin-bottom:22px; color:var(--text);
-  }
-
-  /* ---------- SUMMARY ---------- */
-  .summary p{font-size:16.5px; color:var(--text-muted); max-width:680px;}
-  .summary p strong{color:var(--text); font-weight:600;}
-
-  /* ---------- COMPETENCIES (keyword chips w/ mock volume) ---------- */
-  .kw-table{border:1px solid var(--line); border-radius:10px; overflow:hidden;}
-  .kw-row{
-    display:grid; grid-template-columns:1fr auto; gap:16px;
-    padding:13px 18px; align-items:center;
-    border-bottom:1px solid var(--line);
-    transition:background .2s ease;
-  }
-  .kw-row:last-child{border-bottom:none;}
-  .kw-row:hover{background:var(--surface);}
-  .kw-name{font-size:14.5px; color:var(--text);}
-  .kw-tier{
-    font-family:var(--mono); font-size:11px; color:var(--teal);
-    display:flex; align-items:center; gap:5px;
-  }
-  .kw-tier.core{color:var(--gold);}
-  .kw-tier::before{content:'▲'; font-size:8px;}
-
-  /* ---------- EXPERIENCE TIMELINE ---------- */
-  .timeline{position:relative; padding-left:26px;}
-  .timeline::before{
-    content:''; position:absolute; left:5px; top:6px; bottom:6px; width:1px;
-    background:var(--line);
-  }
-  .role{position:relative; margin-bottom:44px;}
-  .role:last-child{margin-bottom:0;}
-  .role::before{
-    content:''; position:absolute; left:-26px; top:6px;
-    width:11px; height:11px; border-radius:50%;
-    background:var(--ink); border:2px solid var(--gold);
-  }
-  .role-head{
-    display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline;
-    gap:8px 20px; margin-bottom:4px;
-  }
-  .role-title{font-family:var(--display); font-size:19px; font-weight:600; color:var(--text);}
-  .role-date{font-family:var(--mono); font-size:12px; color:var(--gold); white-space:nowrap;}
-  .role-org{font-size:14px; color:var(--teal); margin-bottom:12px;}
-  .role ul{list-style:none; display:flex; flex-direction:column; gap:8px;}
-  .role li{
-    font-size:14.5px; color:var(--text-muted); padding-left:18px; position:relative;
-  }
-  .role li::before{
-    content:'→'; position:absolute; left:0; color:var(--gold-dim); font-size:12px; top:2px;
-  }
-  .role li strong{color:var(--text); font-weight:600;}
-
-  /* ---------- EDUCATION ---------- */
-  .edu-row{
-    display:grid; grid-template-columns:1fr 1fr auto; gap:14px;
-    padding:14px 0; border-bottom:1px solid var(--line);
-    font-size:14.5px;
-  }
-  .edu-row:last-child{border-bottom:none;}
-  .edu-deg{color:var(--text); font-weight:500;}
-  .edu-school{color:var(--text-muted);}
-  .edu-year{font-family:var(--mono); color:var(--gold); font-size:13px;}
-  @media (max-width:640px){
-    .edu-row{grid-template-columns:1fr; gap:2px;}
-  }
-
-  /* ---------- FOOTER / CTA ---------- */
-  footer{padding:60px 0 48px;}
-  .cta-box{
-    background:var(--surface); border:1px solid var(--line); border-radius:14px;
-    padding:36px 32px; text-align:left;
-  }
-  .cta-box .eyebrow{margin-bottom:10px;}
-  .cta-title{font-family:var(--display); font-size:24px; font-weight:600; margin-bottom:10px;}
-  .cta-sub{color:var(--text-muted); font-size:14.5px; margin-bottom:22px; max-width:520px;}
-  .cta-links{display:flex; flex-wrap:wrap; gap:14px;}
-  .cta-btn{
-    font-family:var(--mono); font-size:13px; text-decoration:none;
-    padding:11px 20px; border-radius:8px; letter-spacing:0.02em;
-  }
-  .cta-btn.primary{background:var(--gold); color:var(--ink); font-weight:600;}
-  .cta-btn.primary:hover{background:#f2b854;}
-  .cta-btn.secondary{border:1px solid var(--line); color:var(--text);}
-  .cta-btn.secondary:hover{border-color:var(--teal); color:var(--teal);}
-
-  .foot-note{
-    margin-top:30px; font-family:var(--mono); font-size:11.5px; color:var(--text-muted);
-    display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
-  }
-</style>
+    /* FOOTER / CTA [6, 13] */
+    footer{padding:60px 0 48px;} 
+    .cta-box{ background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:36px 32px; text-align:left; } 
+    .cta-box .eyebrow{margin-bottom:10px;} 
+    .cta-title{font-family:var(--display); font-size:24px; font-weight:600; margin-bottom:10px;} 
+    .cta-sub{color:var(--text-muted); font-size:14.5px; margin-bottom:22px; max-width:520px;} 
+    .cta-links{display:flex; flex-wrap:wrap; gap:14px;} 
+    .cta-btn{ font-family:var(--mono); font-size:13px; text-decoration:none; padding:11px 20px; border-radius:8px; letter-spacing:0.02em; } 
+    .cta-btn.primary{background:var(--gold); color:var(--ink); font-weight:600;} 
+    .cta-btn.primary:hover{background:#f2b854;} 
+    .cta-btn.secondary{border:1px solid var(--line); color:var(--text);} 
+    .cta-btn.secondary:hover{border-color:var(--teal); color:var(--teal);}
+    .foot-note{ margin-top:30px; font-family:var(--mono); font-size:11.5px; color:var(--text-muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; } 
+  </style>
 </head>
 <body>
 
-<nav>
-  <div class="wrap">
-    <div class="nav-mark">neha<span>.</span>ravali</div>
-    <ul class="nav-links">
-      <li><a href="#summary">Summary</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
-<header class="hero">
-  <div class="wrap">
-    <div class="search-bar">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8FA0BA" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <span class="search-type">hire senior seo specialist hyderabad</span>
+  <!-- NAVIGATION BAR [1] -->
+  <nav>
+    <div class="wrap">
+      <div class="nav-mark">NEHA<span>.SEO</span></div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#competencies">Competencies</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <div class="serp-meta">About 1 result — ranked #1 for 5+ years running</div>
-
-    <div class="serp-result">
-      <div class="badge-row">
-        <span class="badge gold">Featured Snippet</span>
-        <span class="badge">People Also Ask</span>
-        <span class="badge">Top Result</span>
+  <!-- HERO / MOCK SEARCH ENGINE SECTION [2, 10, 11] -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="search-bar">
+        <!-- Minimal Search Icon SVG -->
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <div class="search-type">best seo specialist near me</div>
       </div>
-      <div class="result-url">nehatravali.dev <span>› senior-seo-specialist</span></div>
-      <h1 class="result-title">Neha Ravali</h1>
-      <p class="result-desc"><strong>Senior SEO Specialist</strong> — Technical SEO · AEO &amp; GEO · Local SEO · YouTube SEO. Results-driven professional with <strong>5+ years</strong> improving organic visibility across real estate, healthcare, education, and e‑commerce. Skilled in technical audits, keyword clustering, schema markup, and E‑E‑A‑T optimization.</p>
-      <div class="hero-contact">
-        <span>Hyderabad, Telangana</span>
-        <a href="mailto:ravalikolipaka19k@gmail.com">ravalikolipaka19k@gmail.com</a>
-        <a href="tel:+917207377382">+91 7207377382</a>
-        <a href="https://www.linkedin.com/in/neha-ravali" target="_blank" rel="noopener">linkedin.com/in/neha-ravali</a>
+      
+      <div class="serp-meta">About 13,370 results (0.32 seconds)</div>
+      
+      <div class="serp-result">
+        <div class="badge-row">
+          <span class="badge gold">Featured Specialist</span>
+          <span class="badge">Google Certified</span>
+        </div>
+        <div class="result-url">https://Neharavali.github.io <span>› seo-portfolio</span></div>
+        <h1 class="result-title">Neha Ravali — Technical SEO & Growth Engineering Portfolio</h1>
+        <p class="result-desc">Expert <strong>SEO Specialist</strong> specializing in technical website optimization, speed adjustments, and schema markups [9]. Driving massive organic growth through clean coding and data-backed search strategies [17].</p>
+        
+        <div class="hero-contact">
+          <span>📧 <a href="mailto:your-email@example.com">Email Me</a></span>
+          <span>🔗 <a href="https://linkedin.com" target="_blank">LinkedIn</a></span>
+          <span>📂 <a href="resume.pdf" target="_blank">Download Resume (PDF)</a></span>
+        </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<section id="summary" class="summary">
-  <div class="wrap">
-    <div class="eyebrow">Professional Summary</div>
-    <p>Results-driven SEO professional with <strong>5+ years of experience</strong> in SEO, Technical SEO, Local SEO, Social Media Marketing, YouTube SEO, Answer Engine Optimization (AEO), and Generative Engine Optimization (GEO). Experienced in improving organic visibility and search rankings across <strong>real estate, healthcare, education, and e‑commerce</strong>. Skilled in technical SEO audits, keyword research and clustering, content strategy, schema markup, YMYL and E‑E‑A‑T optimization, and AI‑driven search strategies. Proficient in <strong>Ahrefs, Semrush, GA4, Google Search Console, Google Business Profile, YouTube Studio, and Canva</strong>, with hands‑on experience using ChatGPT and Gemini for SEO workflows, content analysis, and optimization.</p>
-  </div>
-</section>
-
-<section id="skills">
-  <div class="wrap">
-    <div class="eyebrow">Core Competencies</div>
-    <h2>What ranks, and why</h2>
-    <div class="kw-table">
-      <div class="kw-row"><span class="kw-name">Search Engine Optimization (SEO)</span><span class="kw-tier core">Core</span></div>
-      <div class="kw-row"><span class="kw-name">Technical SEO Audits &amp; Core Web Vitals</span><span class="kw-tier core">Core</span></div>
-      <div class="kw-row"><span class="kw-name">Answer Engine Optimization (AEO)</span><span class="kw-tier core">Core</span></div>
-      <div class="kw-row"><span class="kw-name">Generative Engine Optimization (GEO)</span><span class="kw-tier core">Core</span></div>
-      <div class="kw-row"><span class="kw-name">Keyword Research &amp; Topic Clustering</span><span class="kw-tier core">Core</span></div>
-      <div class="kw-row"><span class="kw-name">Schema Markup &amp; Structured Data</span><span class="kw-tier">Rising</span></div>
-      <div class="kw-row"><span class="kw-name">On‑Page &amp; Off‑Page SEO</span><span class="kw-tier">Rising</span></div>
-      <div class="kw-row"><span class="kw-name">E‑E‑A‑T Optimization</span><span class="kw-tier">Rising</span></div>
-      <div class="kw-row"><span class="kw-name">Content Strategy &amp; Gap Analysis</span><span class="kw-tier">Rising</span></div>
-      <div class="kw-row"><span class="kw-name">Local SEO / Google Business Profile</span><span class="kw-tier">Rising</span></div>
-      <div class="kw-row"><span class="kw-name">YouTube SEO &amp; Channel Optimization</span><span class="kw-tier">Rising</span></div>
-      <div class="kw-row"><span class="kw-name">Video Keyword Research &amp; Tagging</span><span class="kw-tier">Rising</span></div>
-      <div class="kw-row"><span class="kw-name">Competitor Analysis</span><span class="kw-tier">Steady</span></div>
-      <div class="kw-row"><span class="kw-name">Social Media Marketing (SMM)</span><span class="kw-tier">Steady</span></div>
-      <div class="kw-row"><span class="kw-name">Ahrefs / Semrush / GA4 / GSC</span><span class="kw-tier">Steady</span></div>
-      <div class="kw-row"><span class="kw-name">AI‑Powered Content (SGE / ChatGPT / Gemini)</span><span class="kw-tier">Steady</span></div>
+  <!-- ABOUT SECTION [12] -->
+  <section id="about">
+    <div class="wrap summary">
+      <span class="eyebrow">01 / Overview</span>
+      <h2>Organic Visibility Specialist</h2>
+      <p>I build search engine optimized websites that deliver lightning-fast page speed and excellent user experience [17, 18]. My approach targets both **technical search crawler requirements** (like schema configurations and canonical tags) and high-value **on-page content optimization** [9, 19]. Let's help your business rank at the top of the search engine results pages!</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="experience">
-  <div class="wrap">
-    <div class="eyebrow">Professional Experience</div>
-    <h2>5+ years, four teams, one focus</h2>
-
-    <div class="timeline">
-
-      <div class="role">
-        <div class="role-head">
-          <span class="role-title">SEO Analyst</span>
-          <span class="role-date">Sep 2022 – May 2024</span>
+  <!-- SKILLS / COMPETENCIES SECTION [3] -->
+  <section id="competencies">
+    <div class="wrap">
+      <span class="eyebrow">02 / Key Capabilities</span>
+      <h2>SEO Competencies</h2>
+      <div class="kw-table">
+        <div class="kw-row">
+          <span class="kw-name">On-Page Optimization & Head-Block Audits</span>
+          <span class="kw-tier core">Core Skill</span>
         </div>
-        <div class="role-org">MomJunction Pvt. Ltd. · Hyderabad, Telangana</div>
-        <ul>
-          <li>Developed and implemented SEO strategies — keyword research, competitor analysis, and site analysis — across multiple content clusters to grow organic traffic.</li>
-          <li>Optimized content in line with <strong>YMYL and E‑E‑A‑T</strong> best practices to improve search visibility and content quality.</li>
-          <li>Partnered with content teams on content clusters and internal linking structures aligned with search intent.</li>
-          <li>Used <strong>ChatGPT and Gemini</strong> for SEO workflows, content analysis, keyword ideation, and sprint planning.</li>
-          <li>Built daily traffic reports and checklists using GA4 and Search Console to track performance and spot trends.</li>
-          <li>Ran content gap analysis to surface optimization opportunities across rankings and organic visibility.</li>
-          <li>Strengthened entity relevance via Wikipedia and <strong>MREID references</strong> for better search engine understanding.</li>
-          <li>Landed <strong>Featured Snippet</strong> and <strong>People Also Ask</strong> placements through structured formatting and FAQ‑style content.</li>
-          <li>Supported a publishing cadence of <strong>200+ articles/month</strong>, aligning SEO priorities with editorial workflows.</li>
-        </ul>
-      </div>
-
-      <div class="role">
-        <div class="role-head">
-          <span class="role-title">Search Analyst</span>
-          <span class="role-date">Nov 2021 – Sep 2022</span>
+        <div class="kw-row">
+          <span class="kw-name">JSON-LD Schema Markup & Structured Data</span>
+          <span class="kw-tier core">Core Skill</span>
         </div>
-        <div class="role-org">3dm Agency</div>
-        <ul>
-          <li>Built <strong>hyperlocal landing pages</strong> to improve local search visibility and Google Business Profile rankings.</li>
-          <li>Contributed to client onboarding and SEO pitch decks, presenting strategy, opportunity, and proposed solutions.</li>
-          <li>Prepared monthly SEO audits from Search Console and Analytics data to flag trends and opportunities.</li>
-          <li>Managed on‑page and off‑page SEO — content optimization, technical fixes, and link‑building.</li>
-          <li>Diagnosed technical SEO issues and improved the site's backlink profile.</li>
-          <li>Implemented AMP and structured data — Product, Organization, FAQ, and Breadcrumb schema.</li>
-          <li>Ran paid outreach and email pitching campaigns to acquire relevant backlinks.</li>
-          <li>Wrote SEO‑friendly blog titles and content structures based on keyword research and intent.</li>
-        </ul>
-      </div>
-
-      <div class="role">
-        <div class="role-head">
-          <span class="role-title">Jr. SEO Executive</span>
-          <span class="role-date">Jan 2020 – Apr 2021</span>
+        <div class="kw-row">
+          <span class="kw-name">Page Speed and Core Web Vitals Optimization</span>
+          <span class="kw-tier">Advanced</span>
         </div>
-        <div class="role-org">Filesie: Inbound Marketing Agency</div>
-        <ul>
-          <li>Managed and audited <strong>YouTube channels</strong> for multiple clients, improving visibility and discoverability.</li>
-          <li>Ran multiple SEO projects and client accounts at once, keeping deliverables on schedule.</li>
-          <li>Delivered monthly SEO audit reports covering performance, technical issues, and opportunities.</li>
-          <li>Conducted keyword research to identify relevant search terms and content opportunities.</li>
-          <li>Created, edited, and repurposed video content for client campaigns.</li>
-          <li>Managed and optimized <strong>SEM/Google Ads</strong> Search and Display campaigns.</li>
-          <li>Executed Local SEO — Google Business Profile optimization and Local Business structured data.</li>
-          <li>Built social media content calendars aligned with search intent and keyword strategy.</li>
-        </ul>
-      </div>
-
-      <div class="role">
-        <div class="role-head">
-          <span class="role-title">Digital Marketing Executive</span>
-          <span class="role-date">Dec 2018 – Dec 2019</span>
+        <div class="kw-row">
+          <span class="kw-name">Sitemaps & Robots.txt Customization</span>
+          <span class="kw-tier">Advanced</span>
         </div>
-        <div class="role-org">Dynamo Info Technologies</div>
-        <ul>
-          <li>Planned and executed on‑page and off‑page SEO strategies to grow organic visibility.</li>
-          <li>Implemented Schema.org structured data to strengthen search engine understanding.</li>
-          <li>Managed and optimized a WordPress site, including SEO updates and content optimization.</li>
-          <li>Produced SEO‑focused articles, guest posts, press releases, and infographics to support link‑building.</li>
-          <li>Created animated videos with Biteable, Kapwing, and Canva for social distribution.</li>
-          <li>Built Facebook and social media optimization strategies to grow brand engagement.</li>
-          <li>Configured Google Analytics goals and behavior tracking to monitor engagement.</li>
-        </ul>
+        <div class="kw-row">
+          <span class="kw-name">Keyword Research & Semantic Mapping</span>
+          <span class="kw-tier">Standard</span>
+        </div>
       </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="education">
-  <div class="wrap">
-    <div class="eyebrow">Education</div>
-    <h2>Foundation</h2>
-    <div>
+  <!-- CAREER TIMELINE / EXPERIENCE SECTION [4] -->
+  <section id="experience">
+    <div class="wrap">
+      <span class="eyebrow">03 / Experience</span>
+      <h2>Professional Timeline</h2>
+      <div class="timeline">
+        <div class="role">
+          <div class="role-head">
+            <h3 class="role-title">Freelance Technical SEO Consultant</h3>
+            <span class="role-date">2024 - Present</span>
+          </div>
+          <div class="role-org">Self-Employed</div>
+          <ul>
+            <li>Engineered search-engine-friendly static portfolios with high performance scores and 100% mobile-responsiveness [20, 21].</li>
+            <li>Analyzed organic search metrics using Google Search Console and analytics scripts to locate and patch crawl errors [22].</li>
+            <li>Integrated semantic keywords into high-ranking content and deployed structured data to achieve rich snippets on Google [9, 23].</li>
+          </ul>
+        </div>
+        
+        <div class="role">
+          <div class="role-head">
+            <h3 class="role-title">SEO Content Writer</h3>
+            <span class="role-date">2022 - 2024</span>
+          </div>
+          <div class="role-org">Digital Growth Labs</div>
+          <ul>
+            <li>Researched high-intent keywords using professional analytical planners and integrated them seamlessly into copy [23].</li>
+            <li>Structured headings (H1-H3 tags) for search readability and increased on-page dwell times [24, 25].</li>
+            <li>Built an internal linking strategy and mapped optimized URL slugs to support higher domain rankings [24, 26].</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION SECTION [13] -->
+  <section id="education">
+    <div class="wrap">
+      <span class="eyebrow">04 / Education</span>
+      <h2>Education & Certifications</h2>
       <div class="edu-row">
-        <span class="edu-deg">B.Tech — Electronics &amp; Communication Engineering</span>
-        <span class="edu-school">CJIT, Jangaon</span>
-        <span class="edu-year">2018</span>
+        <span class="edu-deg">B.S. in Communications or Computer Science</span>
+        <span class="edu-school">Your University</span>
+        <span class="edu-year">Graduated 2022</span>
       </div>
       <div class="edu-row">
-        <span class="edu-deg">Intermediate — MPC</span>
-        <span class="edu-school">Sravanthi Jr, Hanamkonda</span>
-        <span class="edu-year">2014</span>
-      </div>
-      <div class="edu-row">
-        <span class="edu-deg">Secondary School Certificate (SSC)</span>
-        <span class="edu-school">St. Gabriel, Hanamkonda</span>
-        <span class="edu-year">2010</span>
+        <span class="edu-deg">Advanced Google Search Console Certification</span>
+        <span class="edu-school">Google Academy</span>
+        <span class="edu-year">Certified 2023</span>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer id="contact">
-  <div class="wrap">
-    <div class="cta-box">
-      <div class="eyebrow">Get in touch</div>
-      <div class="cta-title">Let's improve your rankings.</div>
-      <p class="cta-sub">Open to Senior SEO Specialist roles and consulting engagements across technical SEO, AEO/GEO, and content strategy.</p>
-      <div class="cta-links">
-        <a class="cta-btn primary" href="mailto:ravalikolipaka19k@gmail.com">Email Neha</a>
-        <a class="cta-btn secondary" href="https://www.linkedin.com/in/neha-ravali" target="_blank" rel="noopener">View LinkedIn</a>
-        <a class="cta-btn secondary" href="tel:+917207377382">+91 7207377382</a>
+  <!-- FOOTER / CTA [6, 13] -->
+  <footer>
+    <div class="wrap">
+      <div class="cta-box">
+        <span class="eyebrow">Collaborate</span>
+        <h3 class="cta-title">Let's Rank Your Pages Higher!</h3>
+        <p class="cta-sub">I am currently open for freelance projects, technical SEO audits, and permanent roles. Let's build a fast, visible, and high-performing website together [18].</p>
+        <div class="cta-links">
+          <a href="mailto:your-email@example.com" class="cta-btn primary">Hire Me</a>
+          <a href="resume.pdf" class="cta-btn secondary" target="_blank">View My Resume</a>
+        </div>
       </div>
+      
       <div class="foot-note">
-        <span>Neha Ravali · Hyderabad, Telangana</span>
-        <span>Last crawled: 2026</span>
+        <span>© 2026 Neha Ravali. All rights reserved.</span>
+        <span>Hosted on GitHub Pages · Blazing Fast</span>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
 </html>
